@@ -5,7 +5,6 @@
 //  Created by Marek Forys on 06/10/2021.
 //
 
-
 import UIKit
 import CoreBluetooth
 
@@ -17,7 +16,6 @@ let heatingCharacteristicCBUUID = CBUUID(string:"0000FE41-8E22-4541-9D4C-21EDAE8
 let temperatureCharacteristicCBUUID = CBUUID(string: "0000FE42-8E22-4541-9D4C-21EDAE82ED19")
 
 var temperaturePeripheral: CBPeripheral!
-//var heatingPeripheral: CBPeripheral!
 var heatingCharacteristic: CBCharacteristic!
 
 enum HeatingLevel {
@@ -38,32 +36,35 @@ struct TemperatureData {
   var count: UInt8
 }
 
-class ViewController: UIViewController {
+class ViewController: UIViewController
+{
+    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var heatingLevelLabel: UILabel!
+    @IBOutlet weak var heatingLevelSlider: UISlider!
 
-  @IBOutlet weak var temperatureLabel: UILabel!
-  @IBOutlet weak var heatingLevelLabel: UILabel!
-  @IBOutlet weak var heatingLevelSlider: UISlider!
+    var centralManager: CBCentralManager!
 
-  var centralManager: CBCentralManager!
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
+        centralManager = CBCentralManager(delegate: self, queue: nil)
+
+        // Make the digits monospaces to avoid shifting when the numbers change
+        temperatureLabel.font = UIFont.monospacedDigitSystemFont(ofSize: temperatureLabel.font!.pointSize,
+                                                                 weight: .regular)
+
+        onHeatingLevelReceived(HeatingLevel.None)
+    }
+
+    func onTemperatureReceived(_ temperature: Int)
+    {
+        temperatureLabel.text = String(temperature)
+        print("Temperature displayed: \(temperature)")
+    }
     
-    centralManager = CBCentralManager(delegate: self, queue: nil)
-
-    // Make the digits monospaces to avoid shifting when the numbers change
-    temperatureLabel.font = UIFont.monospacedDigitSystemFont(ofSize: temperatureLabel.font!.pointSize, weight: .regular)
-    
-    onHeatingLevelReceived(HeatingLevel.None)
-  }
-
-  func onTemperatureReceived(_ temperature: Int) {
-    temperatureLabel.text = String(temperature)
-    print("Temperature displayed: \(temperature)")
-  }
-    
-    @IBAction func onHeatingLevelSliderChanged(_ sender: Any) {
-
+    @IBAction func onHeatingLevelSliderChanged(_ sender: Any)
+    {
         guard (temperaturePeripheral != nil) else {
             heatingLevelSlider.value = 0
             return
@@ -98,14 +99,14 @@ class ViewController: UIViewController {
 
         switch (heatingLevel)
         {
-        case .None:
-            heatingLevelNumericValue = 0x00
-        case .Percent33:
-            heatingLevelNumericValue = 0x01
-        case .Percent66:
-            heatingLevelNumericValue = 0x02
-        case .Full:
-            heatingLevelNumericValue = 0x03
+            case .None:
+                heatingLevelNumericValue = 0x00
+            case .Percent33:
+                heatingLevelNumericValue = 0x01
+            case .Percent66:
+                heatingLevelNumericValue = 0x02
+            case .Full:
+                heatingLevelNumericValue = 0x03
         }
 
         var data = Data(count: 9)
@@ -159,7 +160,7 @@ extension ViewController: CBCentralManagerDelegate {
         assert(false, "Unknown state of CBCentralManager!")
     }
   }
-  
+
   func centralManager(_ central: CBCentralManager,
                       didDiscover peripheral: CBPeripheral,
                       advertisementData: [String : Any],
