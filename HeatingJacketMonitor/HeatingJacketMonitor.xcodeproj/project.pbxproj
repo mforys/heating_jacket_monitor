@@ -103,15 +103,13 @@
 		B501D335270DB02600865D3C /* HeatingJacketMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				B5A2287F27103EF400B85E9E /* ViewController */,
 				B501D336270DB02600865D3C /* AppDelegate.swift */,
 				B501D338270DB02600865D3C /* SceneDelegate.swift */,
-				B501D33A270DB02600865D3C /* ViewController.swift */,
 				B501D33C270DB02600865D3C /* Main.storyboard */,
 				B501D33F270DB02600865D3C /* Assets.xcassets */,
 				B501D341270DB02600865D3C /* LaunchScreen.storyboard */,
 				B501D344270DB02600865D3C /* Info.plist */,
-				B5A2287B270E52B600B85E9E /* ViewController+CBCentralManagerDelegate.swift */,
-				B5A2287D270E53FB00B85E9E /* ViewController+CBPeripheralDelegate.swift */,
 			);
 			path = HeatingJacketMonitor;
 			sourceTree = "<group>";
@@ -132,6 +130,16 @@
 				B501D35A270DB02700865D3C /* Info.plist */,
 			);
 			path = HeatingJacketMonitorUITests;
+			sourceTree = "<group>";
+		};
+		B5A2287F27103EF400B85E9E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B501D33A270DB02600865D3C /* ViewController.swift */,
+				B5A2287D270E53FB00B85E9E /* ViewController+CBPeripheralDelegate.swift */,
+				B5A2287B270E52B600B85E9E /* ViewController+CBCentralManagerDelegate.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -444,15 +452,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HA8LS9UHJX;
+				DEVELOPMENT_TEAM = 627WHJVS45;
 				INFOPLIST_FILE = HeatingJacketMonitor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Voris.HeatingJacketMonitor;
+				PRODUCT_BUNDLE_IDENTIFIER = VorisDev.HeatingJacketMonitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -463,15 +473,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HA8LS9UHJX;
+				DEVELOPMENT_TEAM = 627WHJVS45;
 				INFOPLIST_FILE = HeatingJacketMonitor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Voris.HeatingJacketMonitor;
+				PRODUCT_BUNDLE_IDENTIFIER = VorisDev.HeatingJacketMonitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
