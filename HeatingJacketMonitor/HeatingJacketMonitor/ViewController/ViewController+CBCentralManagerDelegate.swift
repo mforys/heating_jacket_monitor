@@ -7,8 +7,14 @@
 
 import CoreBluetooth
 
+//let temperatureServiceCBUUID = CBUUID(string:"0000FE40-CC7A-482A-984A-7F2ED5B3E58F")
+let bmwMulServiceCBUUID = CBUUID(string:"11E0FED6-D13D-8F12-B6BF-D03CA4AD8662")
+let iilat02CBUUID = CBUUID(string:"C841C029-B030-1BD5-1DE1-441BC5AFB476")
+
 extension ViewController: CBCentralManagerDelegate {
-  func centralManagerDidUpdateState(_ central: CBCentralManager) {
+
+  func centralManagerDidUpdateState(_ central: CBCentralManager)
+  {
     switch central.state {
       case .unknown:
         print("central.state is .unknown")
@@ -22,8 +28,6 @@ extension ViewController: CBCentralManagerDelegate {
         print("central.state is .poweredOff")
       case .poweredOn:
         print("central.state is .poweredOn")
-        //centralManager.scanForPeripherals(withServices: [temperatureServiceCBUUID])
-        //centralManager.scanForPeripherals(withServices: [bmwMulServiceCBUUID])
         centralManager.scanForPeripherals(withServices: nil)
       @unknown default:
         assert(false, "Unknown state of CBCentralManager!")
@@ -33,9 +37,10 @@ extension ViewController: CBCentralManagerDelegate {
   func centralManager(_ central: CBCentralManager,
                       didDiscover peripheral: CBPeripheral,
                       advertisementData: [String : Any],
-                      rssi RSSI: NSNumber) {
+                      rssi RSSI: NSNumber)
+  {
     print(peripheral)
-    //print("identifier: \(peripheral.identifier), name: \(peripheral.name ?? "No name"), state: \(peripheral.state), services: \(peripheral.services)")
+
     if (peripheral.identifier.uuidString == bmwMulServiceCBUUID.uuidString)
     {
       temperaturePeripheral = peripheral
@@ -43,6 +48,18 @@ extension ViewController: CBCentralManagerDelegate {
 
       centralManager.stopScan()
       centralManager.connect(temperaturePeripheral)
+    }
+    else if (peripheral.identifier.uuidString == iilat02CBUUID.uuidString)
+    {
+        temperaturePeripheral = peripheral
+        temperaturePeripheral.delegate = self
+
+        centralManager.stopScan()
+        centralManager.connect(temperaturePeripheral)
+    }
+    else
+    {
+        print("Can't find a correct BLE device!")
     }
   }
 

@@ -8,13 +8,6 @@
 import UIKit
 import CoreBluetooth
 
-//let temperatureServiceCBUUID = CBUUID(string: "0x0000fe40cc7a482a984a7f2ed5b3e58f")
-let temperatureServiceCBUUID = CBUUID(string:"0000FE40-CC7A-482A-984A-7F2ED5B3E58F")
-let bmwMulServiceCBUUID = CBUUID(string:"11E0FED6-D13D-8F12-B6BF-D03CA4AD8662")
-//characteristics
-let heatingCharacteristicCBUUID = CBUUID(string:"0000FE41-8E22-4541-9D4C-21EDAE82ED19")
-let temperatureCharacteristicCBUUID = CBUUID(string: "0000FE42-8E22-4541-9D4C-21EDAE82ED19")
-
 var temperaturePeripheral: CBPeripheral!
 var heatingCharacteristic: CBCharacteristic!
 
@@ -50,6 +43,8 @@ class ViewController: UIViewController
 
         centralManager = CBCentralManager(delegate: self, queue: nil)
 
+        disconnectFromDevice()
+
         // Make the digits monospaces to avoid shifting when the numbers change
         temperatureLabel.font = UIFont.monospacedDigitSystemFont(ofSize: temperatureLabel.font!.pointSize,
                                                                  weight: .regular)
@@ -57,12 +52,16 @@ class ViewController: UIViewController
         onHeatingLevelReceived(HeatingLevel.None)
     }
 
+    override func viewDidDisappear(_ animated: Bool) {
+        disconnectFromDevice()
+    }
+
     func onTemperatureReceived(_ temperature: Int)
     {
         temperatureLabel.text = String(temperature)
         print("Temperature displayed: \(temperature)")
     }
-    
+
     @IBAction func onHeatingLevelSliderChanged(_ sender: Any)
     {
         guard (temperaturePeripheral != nil) else {
@@ -135,5 +134,14 @@ class ViewController: UIViewController
       }
 
       print("Heating level displayed: \(heatingLevel)")
+    }
+
+    func disconnectFromDevice () {
+        if temperaturePeripheral != nil {
+            // We have a connection to the device
+            // but we are not subscribed to the Transfer Characteristic for some reason.
+            // Therefore, we will just disconnect from the peripheral
+            centralManager?.cancelPeripheralConnection(temperaturePeripheral!)
+        }
     }
 }
