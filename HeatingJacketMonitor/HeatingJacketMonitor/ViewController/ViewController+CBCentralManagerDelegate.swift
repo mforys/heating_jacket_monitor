@@ -8,8 +8,12 @@
 import CoreBluetooth
 
 //let temperatureServiceCBUUID = CBUUID(string:"0000FE40-CC7A-482A-984A-7F2ED5B3E58F")
-let bmwMulServiceCBUUID = CBUUID(string:"11E0FED6-D13D-8F12-B6BF-D03CA4AD8662")
-let iilat02CBUUID = CBUUID(string:"C841C029-B030-1BD5-1DE1-441BC5AFB476")
+//let bmwMulServiceCBUUID = CBUUID(string:"11E0FED6-D13D-8F12-B6BF-D03CA4AD8662")
+//let iilat02CBUUID = CBUUID(string:"C841C029-B030-1BD5-1DE1-441BC5AFB476")
+//let iilat02CBUUID2 = CBUUID(string:"EE310C37-01A2-EE93-88DE-6F60784BDF30")
+let bmwMulname = "BMW_Mul"
+let iilat02name = "iilat02"
+
 
 extension ViewController: CBCentralManagerDelegate {
 
@@ -41,7 +45,8 @@ extension ViewController: CBCentralManagerDelegate {
   {
     print(peripheral)
 
-    if (peripheral.identifier.uuidString == bmwMulServiceCBUUID.uuidString)
+    //if (peripheral.identifier.uuidString == bmwMulServiceCBUUID.uuidString)
+    if (peripheral.name == iilat02name) || (peripheral.name == bmwMulname)
     {
       temperaturePeripheral = peripheral
       temperaturePeripheral.delegate = self
@@ -49,21 +54,15 @@ extension ViewController: CBCentralManagerDelegate {
       centralManager.stopScan()
       centralManager.connect(temperaturePeripheral)
     }
-    else if (peripheral.identifier.uuidString == iilat02CBUUID.uuidString)
-    {
-        temperaturePeripheral = peripheral
-        temperaturePeripheral.delegate = self
-
-        centralManager.stopScan()
-        centralManager.connect(temperaturePeripheral)
-    }
     else
     {
-        print("Can't find a correct BLE device!")
+        print("Incorrect BLE device!")
     }
   }
 
-  func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
+  func centralManager(_ central: CBCentralManager,
+                      didConnect peripheral: CBPeripheral)
+  {
     print("Peripheral \(peripheral) has been connected!")
     temperaturePeripheral.discoverServices(nil)
   }
