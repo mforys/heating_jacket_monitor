@@ -10,6 +10,8 @@ import CoreBluetooth
 
 var temperaturePeripheral: CBPeripheral!
 var heatingCharacteristic: CBCharacteristic!
+var receivedHeatingLevel = HeatingLevel.None
+var sliderUpdateCount = 0
 
 enum HeatingLevel {
     case None
@@ -71,20 +73,20 @@ class ViewController: UIViewController
 
         switch (heatingLevelSlider.value)
         {
-        case 0.0...20.0:
-            //heatingLevelLabel.text = "None"
-          updateHeatingLevel(heatingLevel: HeatingLevel.None)
-        case 2.0...50.0:
-            //heatingLevelLabel.text = "33%"
-          updateHeatingLevel(heatingLevel: HeatingLevel.Percent33)
-        case 50.0...75.0:
-            //heatingLevelLabel.text = "66%"
-          updateHeatingLevel(heatingLevel: HeatingLevel.Percent66)
-        case 75.0...100.0:
-            //heatingLevelLabel.text = "Full"
-          updateHeatingLevel(heatingLevel: HeatingLevel.Full)
-        default:
-            print("Undefined level of heating set by Heating Level slider!")
+            case 0.0..<20.0:
+                //heatingLevelLabel.text = "None"
+              updateHeatingLevel(heatingLevel: HeatingLevel.None)
+            case 20.0..<50.0:
+                //heatingLevelLabel.text = "33%"
+              updateHeatingLevel(heatingLevel: HeatingLevel.Percent33)
+            case 50.0..<75.0:
+                //heatingLevelLabel.text = "66%"
+              updateHeatingLevel(heatingLevel: HeatingLevel.Percent66)
+            case 75.0...100.0:
+                //heatingLevelLabel.text = "Full"
+              updateHeatingLevel(heatingLevel: HeatingLevel.Full)
+            default:
+                print("Undefined level of heating set by Heating Level slider!")
         }
     }
     
@@ -93,6 +95,8 @@ class ViewController: UIViewController
         guard (temperaturePeripheral != nil) else {
             return
         }
+
+        setHeatingLevel(heatingLevel)
 
         var heatingLevelNumericValue = 0x00
 
@@ -115,25 +119,46 @@ class ViewController: UIViewController
         temperaturePeripheral.writeValue(data, for: heatingCharacteristic, type: .withoutResponse)
     }
     
-    func onHeatingLevelReceived(_ heatingLevel: HeatingLevel)
+    func onHeatingLevelReceived (_ heatingLevel: HeatingLevel)
     {
-      switch (heatingLevel)
-      {
-        case HeatingLevel.None:
-          heatingLevelLabel.text = "None"
-            heatingLevelSlider.setValue(0.0, animated: false)
-        case .Percent33:
-          heatingLevelLabel.text = "33%"
-            heatingLevelSlider.setValue(33, animated: false)
-        case .Percent66:
-          heatingLevelLabel.text = "66%"
-            heatingLevelSlider.setValue(66, animated: false)
-        case .Full:
-          heatingLevelLabel.text = "Full"
-          heatingLevelSlider.setValue(100, animated: false)
-      }
+        print("Heating level received from BLE device: \(heatingLevel)")
 
-      print("Heating level displayed: \(heatingLevel)")
+        receivedHeatingLevel = heatingLevel
+
+        sliderUpdateCount += 1
+
+        // This delay and cancellation workaround is needed
+        // because BLE device doesn't update the heating level just once.
+        // Instead it goes in cyclic manner as 0x03 -> 0x00 -> 0x01 -> 0x02,
+        // so we need to delay the final update until all updates are done
+        // and change it to the latest received value.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            sliderUpdateCount -= 1
+            if (sliderUpdateCount != 0) {
+                assert(sliderUpdateCount > 0)
+                return
+            }
+            self.setHeatingLevel(receivedHeatingLevel)
+        }
+    }
+
+    func setHeatingLevel (_ heatingLevel: HeatingLevel)
+    {
+        switch (heatingLevel)
+        {
+          case .None:
+            heatingLevelLabel.text = "None"
+            heatingLevelSlider.setValue(0.0, animated: false)
+          case .Percent33:
+            heatingLevelLabel.text = "33%"
+            heatingLevelSlider.setValue(33.0, animated: false)
+          case .Percent66:
+            heatingLevelLabel.text = "66%"
+            heatingLevelSlider.setValue(66.0, animated: false)
+          case .Full:
+            heatingLevelLabel.text = "Full"
+            heatingLevelSlider.setValue(100.0, animated: false)
+        }
     }
 
     func disconnectFromDevice () {
