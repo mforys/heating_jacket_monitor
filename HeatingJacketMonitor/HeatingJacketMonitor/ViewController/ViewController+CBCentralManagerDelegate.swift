@@ -43,11 +43,10 @@ extension ViewController: CBCentralManagerDelegate {
                       advertisementData: [String : Any],
                       rssi RSSI: NSNumber)
   {
-    print(peripheral)
-
     //if (peripheral.identifier.uuidString == bmwMulServiceCBUUID.uuidString)
     if (peripheral.name == iilat02name) || (peripheral.name == bmwMulname)
     {
+      print("Correct BLE device found! \n\(peripheral)")
       temperaturePeripheral = peripheral
       temperaturePeripheral.delegate = self
 
@@ -56,7 +55,7 @@ extension ViewController: CBCentralManagerDelegate {
     }
     else
     {
-        print("Incorrect BLE device!")
+        print("Incorrect BLE device! \n\(peripheral)")
     }
   }
 

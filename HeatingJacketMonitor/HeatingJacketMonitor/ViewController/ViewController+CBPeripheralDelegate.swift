@@ -66,7 +66,6 @@ extension ViewController: CBPeripheralDelegate {
     // Ensure this characteristic is the one we configured
     guard characteristic.uuid == heatingCharacteristicCBUUID || characteristic.uuid == temperatureCharacteristicCBUUID else { return }
 
-
     // Check if it is successfully set as notifying
     if characteristic.isNotifying {
       print("Notifications for Characteristic: \(characteristic.uuid) have begun.")
@@ -117,7 +116,7 @@ extension ViewController: CBPeripheralDelegate {
     let byteArray = [UInt8](characteristicData)
 
     for byte in byteArray {
-      print("Value: \(byte)")
+      print("Heating value: \(byte)")
     }
 
     switch (byteArray[0])
@@ -142,10 +141,6 @@ extension ViewController: CBPeripheralDelegate {
     var result = TemperatureData(temperature: 0, operationTime: 0, count: 0)
     guard let characteristicData = characteristic.value else { return result }
     let byteArray = [UInt8](characteristicData)
-
-//    for byte in byteArray {
-//      print("Value: \(byte)")
-//    }
 
     result.temperature = (Int16(byteArray[1]) << 8) + Int16(byteArray[0])
     result.operationTime = (UInt32(byteArray[5]) << 24) + (UInt32(byteArray[4]) << 16) + (UInt32(byteArray[3]) << 8) + UInt32(byteArray[2])
