@@ -17,86 +17,107 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="jMv-Nk-fez" userLabel="StackView_main">
-                                <rect key="frame" x="92.666666666666686" y="36.666666666666686" width="229" height="619"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jMv-Nk-fez" userLabel="StackView_main">
+                                <rect key="frame" x="20" y="20" width="374" height="652"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="N9k-Lq-Uw6" userLabel="StackView_temperature">
-                                        <rect key="frame" x="0.0" y="0.0" width="229" height="219"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="h5l-c0-pU7" userLabel="StackView_indicators">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="452"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Current Temperature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gx5-Hh-nFZ" userLabel="CurrentTemperatureStaticLabel" colorLabel="IBBuiltInLabel-Red">
-                                                <rect key="frame" x="4" y="0.0" width="220.66666666666666" height="28"/>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" name="Apple-Chancery" family="Apple Chancery" pointSize="24"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vav-fa-HwA" userLabel="TemperatureIndicatorLabel">
-                                                <rect key="frame" x="45.666666666666671" y="28" width="137.33333333333331" height="191"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="160"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="FGq-XP-nTI" userLabel="StackView_heating">
-                                        <rect key="frame" x="0.0" y="319" width="229" height="116"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="Heating Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hsd-XG-LW6" userLabel="HeatingLevelStaticLabel">
-                                                <rect key="frame" x="4" y="0.0" width="220.66666666666666" height="36"/>
-                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EkB-Vx-c1s" userLabel="HeatingLevelIndicatorLabel">
-                                                <rect key="frame" x="78.666666666666686" y="37" width="71.333333333333314" height="48"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="49G-be-AiG" userLabel="StackView_heating_slider">
-                                                <rect key="frame" x="0.0" y="86" width="229" height="30"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="N9k-Lq-Uw6" userLabel="StackView_temperature">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="219"/>
                                                 <subviews>
-                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="zd9-rF-x43">
-                                                        <rect key="frame" x="-2" y="0.0" width="233" height="31"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="229" id="Fej-vG-SoL"/>
-                                                        </constraints>
-                                                        <connections>
-                                                            <action selector="onHeatingLevelSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="4jX-Ua-1Wi"/>
-                                                        </connections>
-                                                    </slider>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Current Temperature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gx5-Hh-nFZ" userLabel="CurrentTemperatureStaticLabel" colorLabel="IBBuiltInLabel-Red">
+                                                        <rect key="frame" x="76.666666666666671" y="0.0" width="220.66666666666663" height="28"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="Apple-Chancery" family="Apple Chancery" pointSize="24"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vav-fa-HwA" userLabel="TemperatureIndicatorLabel">
+                                                        <rect key="frame" x="118.33333333333333" y="28" width="137.33333333333337" height="191"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="160"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="FGq-XP-nTI" userLabel="StackView_heating">
+                                                <rect key="frame" x="0.0" y="219" width="374" height="149"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="Heating Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hsd-XG-LW6" userLabel="HeatingLevelStaticLabel">
+                                                        <rect key="frame" x="99.333333333333329" y="0.0" width="175.66666666666669" height="36"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EkB-Vx-c1s" userLabel="HeatingLevelIndicatorLabel">
+                                                        <rect key="frame" x="151.33333333333334" y="37" width="71.333333333333343" height="48"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="49G-be-AiG" userLabel="StackView_heating_slider">
+                                                        <rect key="frame" x="72.666666666666686" y="86" width="229" height="63"/>
+                                                        <subviews>
+                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="zd9-rF-x43">
+                                                                <rect key="frame" x="-2" y="0.0" width="233" height="64"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="229" id="Fej-vG-SoL"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <action selector="onHeatingLevelSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="4jX-Ua-1Wi"/>
+                                                                </connections>
+                                                            </slider>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gH5-e8-RpV" userLabel="StackView_steps">
+                                                <rect key="frame" x="0.0" y="368" width="374" height="84"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="Steps today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LBB-Ef-8S4" userLabel="StepsTodayStaticLabel">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="36"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJ4-fz-beh" userLabel="StepsTodayIndicatorLabel">
+                                                        <rect key="frame" x="0.0" y="36" width="374" height="48"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gH5-e8-RpV" userLabel="StackView_steps">
-                                        <rect key="frame" x="0.0" y="535" width="229" height="84"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IbS-r4-Uku" userLabel="StackView_static_elements">
+                                        <rect key="frame" x="0.0" y="472" width="374" height="180"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="Steps today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LBB-Ef-8S4" userLabel="StepsTodayStaticLabel">
-                                                <rect key="frame" x="0.0" y="0.0" width="229" height="36"/>
-                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work safely" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6Z-nZ-851" userLabel="WorkSafelyLabel">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJ4-fz-beh" userLabel="StepsTodayIndicatorLabel">
-                                                <rect key="frame" x="0.0" y="36" width="229" height="48"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WorkSafely_icons" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HkB-mU-2FK">
+                                                <rect key="frame" x="0.0" y="24" width="374" height="156"/>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                            </imageView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="Gx5-Hh-nFZ" firstAttribute="width" secondItem="hsd-XG-LW6" secondAttribute="width" id="81u-DW-uXY"/>
-                                </constraints>
                                 <variation key="heightClass=compact" axis="horizontal"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.092462241244153906" green="0.086274509803921567" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jMv-Nk-fez" secondAttribute="trailing" constant="20" id="Gs0-b0-pZJ"/>
                             <constraint firstItem="jMv-Nk-fez" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aKy-iB-ovB"/>
                             <constraint firstItem="jMv-Nk-fez" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gDU-fd-UaS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jMv-Nk-fez" secondAttribute="bottom" constant="20" id="pg3-SG-fHu"/>
+                            <constraint firstItem="jMv-Nk-fez" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="tXI-ar-9WT"/>
+                            <constraint firstItem="jMv-Nk-fez" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="yhL-CQ-IUW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Heating Jacket Monitor" id="oM9-J4-V4h"/>
@@ -132,6 +153,7 @@
     </scenes>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
+        <image name="WorkSafely_icons" width="652" height="156"/>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
