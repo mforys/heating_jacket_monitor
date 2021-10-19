@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "WorkSafely_icons.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
