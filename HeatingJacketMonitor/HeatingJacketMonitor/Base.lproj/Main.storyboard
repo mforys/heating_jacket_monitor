@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Heating Jacket Monitor-->
+        <!--moniheat me-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HeatingJacketMonitor" customModuleProvider="target" sceneMemberID="viewController">
@@ -124,7 +124,7 @@
                             <constraint firstItem="jMv-Nk-fez" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="yhL-CQ-IUW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Heating Jacket Monitor" id="oM9-J4-V4h"/>
+                    <navigationItem key="navigationItem" title="moniheat me" id="oM9-J4-V4h"/>
                     <connections>
                         <outlet property="heatingLevelLabel" destination="EkB-Vx-c1s" id="eKx-dd-fFn"/>
                         <outlet property="heatingLevelSlider" destination="zd9-rF-x43" id="LHR-BE-AG0"/>
