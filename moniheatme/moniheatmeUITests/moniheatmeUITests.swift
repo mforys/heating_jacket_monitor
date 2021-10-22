@@ -1,13 +1,13 @@
 //
-//  HeatingJacketMonitorUITests.swift
-//  HeatingJacketMonitorUITests
+//  moniheatmeUITests.swift
+//  moniheatmeUITests
 //
 //  Created by Marek Forys on 06/10/2021.
 //
 
 import XCTest
 
-class HeatingJacketMonitorUITests: XCTestCase {
+class moniheatmeUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

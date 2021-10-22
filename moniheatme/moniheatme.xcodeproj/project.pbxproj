@@ -13,8 +13,8 @@
 		B501D33E270DB02600865D3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B501D33C270DB02600865D3C /* Main.storyboard */; };
 		B501D340270DB02600865D3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B501D33F270DB02600865D3C /* Assets.xcassets */; };
 		B501D343270DB02600865D3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B501D341270DB02600865D3C /* LaunchScreen.storyboard */; };
-		B501D34E270DB02700865D3C /* HeatingJacketMonitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B501D34D270DB02700865D3C /* HeatingJacketMonitorTests.swift */; };
-		B501D359270DB02700865D3C /* HeatingJacketMonitorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B501D358270DB02700865D3C /* HeatingJacketMonitorUITests.swift */; };
+		B501D34E270DB02700865D3C /* moniheatmeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B501D34D270DB02700865D3C /* moniheatmeTests.swift */; };
+		B501D359270DB02700865D3C /* moniheatmeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B501D358270DB02700865D3C /* moniheatmeUITests.swift */; };
 		B5A2287C270E52B700B85E9E /* ViewController+CBCentralManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A2287B270E52B600B85E9E /* ViewController+CBCentralManagerDelegate.swift */; };
 		B5A2287E270E53FB00B85E9E /* ViewController+CBPeripheralDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A2287D270E53FB00B85E9E /* ViewController+CBPeripheralDelegate.swift */; };
 /* End PBXBuildFile section */
@@ -46,10 +46,10 @@
 		B501D342270DB02600865D3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B501D344270DB02600865D3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B501D349270DB02700865D3C /* moniheatmeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = moniheatmeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B501D34D270DB02700865D3C /* HeatingJacketMonitorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatingJacketMonitorTests.swift; sourceTree = "<group>"; };
+		B501D34D270DB02700865D3C /* moniheatmeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moniheatmeTests.swift; sourceTree = "<group>"; };
 		B501D34F270DB02700865D3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B501D354270DB02700865D3C /* moniheatmeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = moniheatmeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B501D358270DB02700865D3C /* HeatingJacketMonitorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatingJacketMonitorUITests.swift; sourceTree = "<group>"; };
+		B501D358270DB02700865D3C /* moniheatmeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moniheatmeUITests.swift; sourceTree = "<group>"; };
 		B501D35A270DB02700865D3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5A2287B270E52B600B85E9E /* ViewController+CBCentralManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CBCentralManagerDelegate.swift"; sourceTree = "<group>"; };
 		B5A2287D270E53FB00B85E9E /* ViewController+CBPeripheralDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CBPeripheralDelegate.swift"; sourceTree = "<group>"; };
@@ -83,9 +83,9 @@
 		B501D32A270DB02600865D3C = {
 			isa = PBXGroup;
 			children = (
-				B501D335270DB02600865D3C /* HeatingJacketMonitor */,
-				B501D34C270DB02700865D3C /* HeatingJacketMonitorTests */,
-				B501D357270DB02700865D3C /* HeatingJacketMonitorUITests */,
+				B501D335270DB02600865D3C /* moniheatme */,
+				B501D34C270DB02700865D3C /* moniheatmeTests */,
+				B501D357270DB02700865D3C /* moniheatmeUITests */,
 				B501D334270DB02600865D3C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,7 +100,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B501D335270DB02600865D3C /* HeatingJacketMonitor */ = {
+		B501D335270DB02600865D3C /* moniheatme */ = {
 			isa = PBXGroup;
 			children = (
 				B5A2287F27103EF400B85E9E /* ViewController */,
@@ -111,25 +111,25 @@
 				B501D341270DB02600865D3C /* LaunchScreen.storyboard */,
 				B501D344270DB02600865D3C /* Info.plist */,
 			);
-			path = HeatingJacketMonitor;
+			path = moniheatme;
 			sourceTree = "<group>";
 		};
-		B501D34C270DB02700865D3C /* HeatingJacketMonitorTests */ = {
+		B501D34C270DB02700865D3C /* moniheatmeTests */ = {
 			isa = PBXGroup;
 			children = (
-				B501D34D270DB02700865D3C /* HeatingJacketMonitorTests.swift */,
+				B501D34D270DB02700865D3C /* moniheatmeTests.swift */,
 				B501D34F270DB02700865D3C /* Info.plist */,
 			);
-			path = HeatingJacketMonitorTests;
+			path = moniheatmeTests;
 			sourceTree = "<group>";
 		};
-		B501D357270DB02700865D3C /* HeatingJacketMonitorUITests */ = {
+		B501D357270DB02700865D3C /* moniheatmeUITests */ = {
 			isa = PBXGroup;
 			children = (
-				B501D358270DB02700865D3C /* HeatingJacketMonitorUITests.swift */,
+				B501D358270DB02700865D3C /* moniheatmeUITests.swift */,
 				B501D35A270DB02700865D3C /* Info.plist */,
 			);
-			path = HeatingJacketMonitorUITests;
+			path = moniheatmeUITests;
 			sourceTree = "<group>";
 		};
 		B5A2287F27103EF400B85E9E /* ViewController */ = {
@@ -284,7 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B501D34E270DB02700865D3C /* HeatingJacketMonitorTests.swift in Sources */,
+				B501D34E270DB02700865D3C /* moniheatmeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B501D359270DB02700865D3C /* HeatingJacketMonitorUITests.swift in Sources */,
+				B501D359270DB02700865D3C /* moniheatmeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,7 +455,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 999GB9B4YM;
-				INFOPLIST_FILE = HeatingJacketMonitor/Info.plist;
+				INFOPLIST_FILE = moniheatme/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -476,7 +476,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 999GB9B4YM;
-				INFOPLIST_FILE = HeatingJacketMonitor/Info.plist;
+				INFOPLIST_FILE = moniheatme/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -496,14 +496,14 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HA8LS9UHJX;
-				INFOPLIST_FILE = HeatingJacketMonitorTests/Info.plist;
+				INFOPLIST_FILE = moniheatmeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Voris.HeatingJacketMonitorTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.voris.moniheatmeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -518,14 +518,14 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HA8LS9UHJX;
-				INFOPLIST_FILE = HeatingJacketMonitorTests/Info.plist;
+				INFOPLIST_FILE = moniheatmeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Voris.HeatingJacketMonitorTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.voris.moniheatmeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -539,17 +539,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HA8LS9UHJX;
-				INFOPLIST_FILE = HeatingJacketMonitorUITests/Info.plist;
+				INFOPLIST_FILE = moniheatmeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Voris.HeatingJacketMonitorUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.voris.moniheatmeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = HeatingJacketMonitor;
+				TEST_TARGET_NAME = moniheatme;
 			};
 			name = Debug;
 		};
@@ -559,17 +559,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HA8LS9UHJX;
-				INFOPLIST_FILE = HeatingJacketMonitorUITests/Info.plist;
+				INFOPLIST_FILE = moniheatmeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Voris.HeatingJacketMonitorUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.voris.moniheatmeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = HeatingJacketMonitor;
+				TEST_TARGET_NAME = moniheatme;
 			};
 			name = Release;
 		};

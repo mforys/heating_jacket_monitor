@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  HeatingJacketMonitor
+//  moniheatme
 //
 //  Created by Marek Forys on 06/10/2021.
 //

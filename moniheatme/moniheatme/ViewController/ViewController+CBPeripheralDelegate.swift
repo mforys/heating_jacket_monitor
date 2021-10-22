@@ -1,6 +1,6 @@
 //
 //  ViewController+CBPeripheralDelegate.swift
-//  HeatingJacketMonitor
+//  moniheatme
 //
 //  Created by Marek Forys on 07/10/2021.
 //
