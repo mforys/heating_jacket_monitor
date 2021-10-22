@@ -20,12 +20,12 @@
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zA1-v9-Pzk">
                                 <rect key="frame" x="20" y="64" width="354" height="778"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQy-MP-Kte" colorLabel="IBBuiltInLabel-Red">
-                                        <rect key="frame" x="19" y="0.0" width="316" height="565"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQy-MP-Kte" colorLabel="IBBuiltInLabel-Red">
+                                        <rect key="frame" x="44.5" y="0.0" width="265.5" height="565"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" systemColor="systemRedColor"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="Heating Jacket Monitor">
+                                            <fragment content="moniheat me">
                                                 <attributes>
                                                     <color key="NSColor" red="1" green="0.22980165087162441" blue="0.35663196518437068" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <font key="NSFont" metaFont="system" size="48"/>
