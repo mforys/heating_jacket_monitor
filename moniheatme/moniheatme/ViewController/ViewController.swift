@@ -36,6 +36,7 @@ class ViewController: UIViewController
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var heatingLevelLabel: UILabel!
     @IBOutlet weak var heatingLevelSlider: UISlider!
+    @IBOutlet weak var syncButton: UIButton!
 
     var centralManager: CBCentralManager!
 
@@ -168,5 +169,10 @@ class ViewController: UIViewController
             // Therefore, we will just disconnect from the peripheral
             centralManager?.cancelPeripheralConnection(temperaturePeripheral!)
         }
+    }
+
+
+    @IBAction func syncButtonTouchedInside(_ sender: Any) {
+        print("Sync button touched ...")
     }
 }
