@@ -175,4 +175,8 @@ class ViewController: UIViewController
     @IBAction func syncButtonTouchedInside(_ sender: Any) {
         print("Sync button touched ...")
     }
+
+    @IBAction func userButtonTouchedUpInside(_ sender: Any) {
+        print("User button touched ...")
+    }
 }
