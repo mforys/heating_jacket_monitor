@@ -46,6 +46,10 @@ class HttpController {
                                    "data": ["employee_code":userName,
                                             "temperature":String(temperature)]]
 
+        sendJsonDataToServer(json:json)
+    }
+
+    func sendJsonDataToServer(json: [String: Any]) {
         let jsonData = try? JSONSerialization.data(withJSONObject: json)
 
         // create post request
