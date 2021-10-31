@@ -41,7 +41,7 @@ class ViewController: UIViewController
     var centralManager: CBCentralManager!
     var httpController: HttpController!
 
-    var currentTemperature:Int
+    var currentTemperature:Int = 0
 
     override func viewDidLoad()
     {
