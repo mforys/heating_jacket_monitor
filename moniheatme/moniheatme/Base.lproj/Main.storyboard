@@ -13,7 +13,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="moniheatme" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="MainView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -24,23 +24,23 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="370.66666666666669"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uN9-Zf-L9q" userLabel="StackView_user_and_sync">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="57.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="67"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHo-00-r1e" userLabel="ButtonUser">
-                                                        <rect key="frame" x="0.0" y="0.0" width="177" height="34"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="177" height="41"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                         <state key="normal" title="User">
                                                             <color key="titleColor" systemColor="systemRedColor"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="userButtonTouchedUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="feJ-N1-7NH"/>
+                                                            <segue destination="M1H-h1-2qq" kind="show" id="W7v-ih-sLm"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KkS-YF-vL9" userLabel="ButtonSync">
-                                                        <rect key="frame" x="197" y="0.0" width="177" height="34"/>
+                                                        <rect key="frame" x="197" y="0.0" width="177" height="41"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                         <state key="normal" title="Sync">
                                                             <color key="titleColor" systemColor="systemRedColor"/>
                                                         </state>
@@ -51,7 +51,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="N9k-Lq-Uw6" userLabel="StackView_temperature">
-                                                <rect key="frame" x="0.0" y="57.333333333333329" width="374" height="129.66666666666669"/>
+                                                <rect key="frame" x="0.0" y="67" width="374" height="125.66666666666669"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Current Temperature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gx5-Hh-nFZ" userLabel="CurrentTemperatureStaticLabel" colorLabel="IBBuiltInLabel-Red">
                                                         <rect key="frame" x="80.333333333333329" y="0.0" width="213.33333333333337" height="28.666666666666668"/>
@@ -60,7 +60,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vav-fa-HwA" userLabel="TemperatureIndicatorLabel">
-                                                        <rect key="frame" x="169.33333333333334" y="28.666666666666671" width="35.666666666666657" height="101.00000000000001"/>
+                                                        <rect key="frame" x="169.33333333333334" y="28.666666666666657" width="35.666666666666657" height="97"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -68,7 +68,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="FGq-XP-nTI" userLabel="StackView_heating">
-                                                <rect key="frame" x="0.0" y="187" width="374" height="183.66666666666663"/>
+                                                <rect key="frame" x="0.0" y="192.66666666666669" width="374" height="178"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="Heating Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hsd-XG-LW6" userLabel="HeatingLevelStaticLabel">
                                                         <rect key="frame" x="116.66666666666667" y="0.0" width="140.66666666666663" height="28.666666666666668"/>
@@ -77,16 +77,16 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EkB-Vx-c1s" userLabel="HeatingLevelIndicatorLabel">
-                                                        <rect key="frame" x="151.33333333333334" y="29.666666666666686" width="71.333333333333343" height="48"/>
+                                                        <rect key="frame" x="151.33333333333334" y="29.666666666666629" width="71.333333333333343" height="48"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="49G-be-AiG" userLabel="StackView_heating_slider">
-                                                        <rect key="frame" x="72.666666666666686" y="78.666666666666686" width="229" height="105"/>
+                                                        <rect key="frame" x="72.666666666666686" y="78.666666666666629" width="229" height="99.333333333333314"/>
                                                         <subviews>
                                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="zd9-rF-x43">
-                                                                <rect key="frame" x="-2" y="0.0" width="233" height="106"/>
+                                                                <rect key="frame" x="-2" y="0.0" width="233" height="100.33333333333333"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="229" id="Fej-vG-SoL"/>
                                                                 </constraints>
@@ -183,6 +183,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbN-vS-XYy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-255" y="117"/>
+        </scene>
+        <!--UserViewController-->
+        <scene sceneID="EnU-Yb-lak">
+            <objects>
+                <viewController id="M1H-h1-2qq" userLabel="UserViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M2f-iL-QA1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="s2M-PU-5gW" userLabel="MainStackView">
+                                <rect key="frame" x="50" y="99.999999999999986" width="314" height="203.66666666666663"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZw-ed-UbP" userLabel="UserNameLabel">
+                                        <rect key="frame" x="97" y="0.0" width="120" height="28.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="OZs-DL-7XT" userLabel="UserNameRoundStyleTextField">
+                                        <rect key="frame" x="57" y="78.666666666666657" width="200" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="ROH-hP-ytI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" textContentType="username"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bfm-o7-beF" userLabel="SetUserNameButton">
+                                        <rect key="frame" x="138" y="162.66666666666669" width="38" height="41"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <state key="normal" title="Set">
+                                            <color key="titleColor" systemColor="systemRedColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WIx-yE-df6"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="s2M-PU-5gW" firstAttribute="leading" secondItem="WIx-yE-df6" secondAttribute="leading" constant="50" id="GX7-2x-CFw"/>
+                            <constraint firstItem="s2M-PU-5gW" firstAttribute="top" secondItem="WIx-yE-df6" secondAttribute="top" constant="100" id="NTW-Eo-vgb"/>
+                            <constraint firstItem="WIx-yE-df6" firstAttribute="trailing" secondItem="s2M-PU-5gW" secondAttribute="trailing" constant="50" id="oJC-fx-Zxa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bpX-EH-fBD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oVq-h5-8hJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="935" y="-719"/>
         </scene>
     </scenes>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
