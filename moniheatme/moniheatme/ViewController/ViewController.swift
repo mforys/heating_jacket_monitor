@@ -36,15 +36,19 @@ class ViewController: UIViewController
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var heatingLevelLabel: UILabel!
     @IBOutlet weak var heatingLevelSlider: UISlider!
-    @IBOutlet weak var syncButton: UIButton!
+    //@IBOutlet weak var syncButton: UIButton!
 
     var centralManager: CBCentralManager!
+    var httpController: HttpController!
+
+    var currentTemperature:Int
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
 
         centralManager = CBCentralManager(delegate: self, queue: nil)
+        httpController = HttpController()
 
         disconnectFromDevice()
 
@@ -61,6 +65,7 @@ class ViewController: UIViewController
 
     func onTemperatureReceived(_ temperature: Int)
     {
+        currentTemperature = temperature
         temperatureLabel.text = String(temperature)
         print("Temperature displayed: \(temperature)")
     }
@@ -171,12 +176,8 @@ class ViewController: UIViewController
         }
     }
 
-
     @IBAction func syncButtonTouchedInside(_ sender: Any) {
         print("Sync button touched ...")
-    }
-
-    @IBAction func userButtonTouchedUpInside(_ sender: Any) {
-        print("User button touched ...")
+        httpController.syncDataWithHttpServer(temperature: currentTemperature)
     }
 }

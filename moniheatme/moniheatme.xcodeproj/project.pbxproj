@@ -16,6 +16,7 @@
 		B501D34E270DB02700865D3C /* moniheatmeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B501D34D270DB02700865D3C /* moniheatmeTests.swift */; };
 		B501D359270DB02700865D3C /* moniheatmeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B501D358270DB02700865D3C /* moniheatmeUITests.swift */; };
 		B555FAAF272C5AD700B93062 /* HttpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B555FAAE272C5AD700B93062 /* HttpController.swift */; };
+		B555FAB1272E9DEF00B93062 /* UserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B555FAB0272E9DEF00B93062 /* UserDataViewController.swift */; };
 		B5A2287C270E52B700B85E9E /* ViewController+CBCentralManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A2287B270E52B600B85E9E /* ViewController+CBCentralManagerDelegate.swift */; };
 		B5A2287E270E53FB00B85E9E /* ViewController+CBPeripheralDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A2287D270E53FB00B85E9E /* ViewController+CBPeripheralDelegate.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,7 @@
 		B501D358270DB02700865D3C /* moniheatmeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moniheatmeUITests.swift; sourceTree = "<group>"; };
 		B501D35A270DB02700865D3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B555FAAE272C5AD700B93062 /* HttpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpController.swift; sourceTree = "<group>"; };
+		B555FAB0272E9DEF00B93062 /* UserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataViewController.swift; sourceTree = "<group>"; };
 		B5A2287B270E52B600B85E9E /* ViewController+CBCentralManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CBCentralManagerDelegate.swift"; sourceTree = "<group>"; };
 		B5A2287D270E53FB00B85E9E /* ViewController+CBPeripheralDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CBPeripheralDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +115,7 @@
 				B501D341270DB02600865D3C /* LaunchScreen.storyboard */,
 				B501D344270DB02600865D3C /* Info.plist */,
 				B555FAAE272C5AD700B93062 /* HttpController.swift */,
+				B555FAB0272E9DEF00B93062 /* UserDataViewController.swift */,
 			);
 			path = moniheatme;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				B5A2287E270E53FB00B85E9E /* ViewController+CBPeripheralDelegate.swift in Sources */,
 				B501D33B270DB02600865D3C /* ViewController.swift in Sources */,
 				B501D337270DB02600865D3C /* AppDelegate.swift in Sources */,
+				B555FAB1272E9DEF00B93062 /* UserDataViewController.swift in Sources */,
 				B5A2287C270E52B700B85E9E /* ViewController+CBCentralManagerDelegate.swift in Sources */,
 				B501D339270DB02600865D3C /* SceneDelegate.swift in Sources */,
 				B555FAAF272C5AD700B93062 /* HttpController.swift in Sources */,
