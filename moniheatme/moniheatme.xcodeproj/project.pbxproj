@@ -26,6 +26,7 @@
 		B531AC5527450405003DBF96 /* UserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B555FAB0272E9DEF00B93062 /* UserDataViewController.swift */; };
 		B555FAAF272C5AD700B93062 /* HttpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B555FAAE272C5AD700B93062 /* HttpController.swift */; };
 		B555FAB1272E9DEF00B93062 /* UserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B555FAB0272E9DEF00B93062 /* UserDataViewController.swift */; };
+		B576CC63277F3084001F05CA /* moniheatmeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B576CC62277F3084001F05CA /* moniheatmeUITests.swift */; };
 		B5A2287C270E52B700B85E9E /* ViewController+CBCentralManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A2287B270E52B600B85E9E /* ViewController+CBCentralManagerDelegate.swift */; };
 		B5A2287E270E53FB00B85E9E /* ViewController+CBPeripheralDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A2287D270E53FB00B85E9E /* ViewController+CBPeripheralDelegate.swift */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = B531AC3227450382003DBF96;
 			remoteInfo = moniheatmeAppClip;
+		};
+		B576CC65277F3084001F05CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B501D32B270DB02600865D3C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B501D332270DB02600865D3C;
+			remoteInfo = moniheatme;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -68,6 +76,9 @@
 		B531AC4427450383003DBF96 /* moniheatmeAppClip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = moniheatmeAppClip.entitlements; sourceTree = "<group>"; };
 		B555FAAE272C5AD700B93062 /* HttpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpController.swift; sourceTree = "<group>"; };
 		B555FAB0272E9DEF00B93062 /* UserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataViewController.swift; sourceTree = "<group>"; };
+		B576CC60277F3084001F05CA /* moniheatmeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = moniheatmeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B576CC62277F3084001F05CA /* moniheatmeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moniheatmeUITests.swift; sourceTree = "<group>"; };
+		B576CC64277F3084001F05CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5A2287B270E52B600B85E9E /* ViewController+CBCentralManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CBCentralManagerDelegate.swift"; sourceTree = "<group>"; };
 		B5A2287D270E53FB00B85E9E /* ViewController+CBPeripheralDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CBPeripheralDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +98,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B576CC5D277F3084001F05CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -95,6 +113,7 @@
 			children = (
 				B501D335270DB02600865D3C /* moniheatme */,
 				B531AC3427450382003DBF96 /* moniheatmeAppClip */,
+				B576CC61277F3084001F05CA /* moniheatmeUITests */,
 				B501D334270DB02600865D3C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,6 +123,7 @@
 			children = (
 				B501D333270DB02600865D3C /* moniheatme.app */,
 				B531AC3327450382003DBF96 /* moniheatmeAppClip.app */,
+				B576CC60277F3084001F05CA /* moniheatmeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,6 +151,15 @@
 				B531AC4427450383003DBF96 /* moniheatmeAppClip.entitlements */,
 			);
 			path = moniheatmeAppClip;
+			sourceTree = "<group>";
+		};
+		B576CC61277F3084001F05CA /* moniheatmeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B576CC62277F3084001F05CA /* moniheatmeUITests.swift */,
+				B576CC64277F3084001F05CA /* Info.plist */,
+			);
+			path = moniheatmeUITests;
 			sourceTree = "<group>";
 		};
 		B5A2287F27103EF400B85E9E /* ViewController */ = {
@@ -182,6 +211,24 @@
 			productReference = B531AC3327450382003DBF96 /* moniheatmeAppClip.app */;
 			productType = "com.apple.product-type.application.on-demand-install-capable";
 		};
+		B576CC5F277F3084001F05CA /* moniheatmeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B576CC69277F3084001F05CA /* Build configuration list for PBXNativeTarget "moniheatmeUITests" */;
+			buildPhases = (
+				B576CC5C277F3084001F05CA /* Sources */,
+				B576CC5D277F3084001F05CA /* Frameworks */,
+				B576CC5E277F3084001F05CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B576CC66277F3084001F05CA /* PBXTargetDependency */,
+			);
+			name = moniheatmeUITests;
+			productName = moniheatmeUITests;
+			productReference = B576CC60277F3084001F05CA /* moniheatmeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -196,6 +243,10 @@
 					};
 					B531AC3227450382003DBF96 = {
 						CreatedOnToolsVersion = 12.5;
+					};
+					B576CC5F277F3084001F05CA = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = B501D332270DB02600865D3C;
 					};
 				};
 			};
@@ -214,6 +265,7 @@
 			targets = (
 				B501D332270DB02600865D3C /* moniheatme */,
 				B531AC3227450382003DBF96 /* moniheatmeAppClip */,
+				B576CC5F277F3084001F05CA /* moniheatmeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -236,6 +288,13 @@
 				B531AC53274503F1003DBF96 /* LaunchScreen.storyboard in Resources */,
 				B531AC4F274503DF003DBF96 /* Assets.xcassets in Resources */,
 				B531AC50274503E2003DBF96 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B576CC5E277F3084001F05CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +329,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B576CC5C277F3084001F05CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B576CC63277F3084001F05CA /* moniheatmeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -277,6 +344,11 @@
 			isa = PBXTargetDependency;
 			target = B531AC3227450382003DBF96 /* moniheatmeAppClip */;
 			targetProxy = B531AC4527450383003DBF96 /* PBXContainerItemProxy */;
+		};
+		B576CC66277F3084001F05CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B501D332270DB02600865D3C /* moniheatme */;
+			targetProxy = B576CC65277F3084001F05CA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -512,6 +584,46 @@
 			};
 			name = Release;
 		};
+		B576CC67277F3084001F05CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 999GB9B4YM;
+				INFOPLIST_FILE = moniheatmeUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Voris.moniheatmeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = moniheatme;
+			};
+			name = Debug;
+		};
+		B576CC68277F3084001F05CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 999GB9B4YM;
+				INFOPLIST_FILE = moniheatmeUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Voris.moniheatmeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = moniheatme;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -538,6 +650,15 @@
 			buildConfigurations = (
 				B531AC4927450383003DBF96 /* Debug */,
 				B531AC4A27450383003DBF96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B576CC69277F3084001F05CA /* Build configuration list for PBXNativeTarget "moniheatmeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B576CC67277F3084001F05CA /* Debug */,
+				B576CC68277F3084001F05CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
