@@ -22,6 +22,19 @@ class moniheatmeUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+    func testMainScreen() throws {
+
+        let app = XCUIApplication()
+        app.launch()
+
+        XCTAssertTrue(app/*@START_MENU_TOKEN@*/.staticTexts["User"]/*[[".buttons[\"User\"].staticTexts[\"User\"]",".staticTexts[\"User\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.exists)
+        XCTAssertTrue(app.staticTexts["Current Temperature"].exists)
+        XCTAssertTrue(app.staticTexts["Heating Level"].exists)
+        XCTAssertTrue(app.staticTexts["None"].exists)
+        XCTAssertTrue(app.staticTexts["Steps today"].exists)
+        XCTAssertTrue(app.staticTexts["Work safely"].exists)
+    }
+
     func testSetUserName() throws {
         // UI tests must launch the application that they test.
         //let app = XCUIApplication()
