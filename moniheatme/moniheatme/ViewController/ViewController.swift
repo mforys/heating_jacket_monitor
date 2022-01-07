@@ -12,6 +12,7 @@ var temperaturePeripheral: CBPeripheral!
 var heatingCharacteristic: CBCharacteristic!
 var receivedHeatingLevel = HeatingLevel.None
 var sliderUpdateCount = 0
+let kImpossibleTemperatureToAchieve = -999999
 
 enum HeatingLevel {
     case None
@@ -41,7 +42,7 @@ class ViewController: UIViewController
     var centralManager: CBCentralManager!
     var httpController: HttpController!
 
-    var currentTemperature:Int = 0
+    var currentTemperature:Int = kImpossibleTemperatureToAchieve
 
     override func viewDidLoad()
     {
@@ -178,6 +179,12 @@ class ViewController: UIViewController
 
     @IBAction func syncButtonTouchedInside(_ sender: Any) {
         print("Sync button touched ...")
+
+        if (currentTemperature == kImpossibleTemperatureToAchieve) {
+            print("No sync to remote server is needed, because we don't have a valid temperature measurement!")
+            return
+        }
+
         httpController.syncDataWithHttpServer(temperature: currentTemperature)
     }
 }
